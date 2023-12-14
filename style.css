@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#header{
+    margin: 0;
+    display: flex;
+    height: 20vh;
+    border: 10px solid #e29d3f;
+    background-color: #ffe79f;
+    justify-content: center;
+    align-items: center;
+}
+
+#header h1{
+    font-size: 3rem;
+    color: #514538;
+}
+
+#main{
+    height: 77vh;
+    display: flex;
+    background-color: #fffa9d;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main #joke_here{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-size: 24px;
+}
+
+#main #tell_me{
+    border-radius: 10px;
+    height: 100px;
+    width: 200px;
+    font-size: 24px;
+}
+
+
+#footer{
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
