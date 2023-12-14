@@ -1,18 +1,22 @@
-const xhr = new XMLHttpRequest();
+const buttonjoke = $('#tell_me');
 
-xhr.onload = function(){
-    const result = JSON.parse(xhr.response);
-    console.log(result.value);
+buttonjoke.click();
 
+buttonjoke.click(function () {
+    const xhr = new XMLHttpRequest();
 
-        const buttonjoke = $('#tell_me');
+    xhr.onload = function () {
+        const result = JSON.parse(xhr.response);
+        console.log(result.value);
 
-        buttonjoke.click(function(){
         document.getElementById('joke_here').innerHTML = result.value;
-        });
-}
+    };
+        xhr.open("GET", ' https://api.chucknorris.io/jokes/random');
+        xhr.send();
+   
+});
 
-xhr.open("GET",' https://api.chucknorris.io/jokes/random');
-xhr.send(); 
+
+
 
 
